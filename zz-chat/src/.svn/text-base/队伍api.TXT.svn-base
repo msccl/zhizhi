@@ -1,0 +1,167 @@
+1、创建队伍
+http://api.7kzz.com/chat/app?act=addnewteam&gameid=1&uid=1035
+
+
+返回值：
+{"result":"1"}
+
+result:	正常返回刚刚创建的队伍id，例如1
+				-1:参数gameid传递错误
+				-2:用户已经加入队伍，不能同时加入另一队伍
+				-3:创建失败
+				
+				
+				
+2、获取队伍信息
+http://api.7kzz.com/chat/app?act=getteam&gameid=1&uid=1035
+
+
+返回值：
+
+正常时返回：
+[{"createtime":"2011-06-14 07:37:06","gameid":1,"id":1,"lasttime":1308008226419,"leaderuid":1035,"name":"队伍","password":""}]
+
+	id：队伍ID
+	leaderuid:队长ID
+	name：队伍名称，现在统一都叫队伍
+	password：队伍密码，以后可以用于加入使用
+	gameid：队伍创建时所属游戏ID
+	createtime：创建时间
+	lasttime:队伍最后活跃时间
+
+异常时返回：
+{"result":"-1"}
+result值说明： 
+			-1：gameid参数传递错误
+			-2：用户还未加入队伍，无法获取队伍信息
+			-3：队伍不存在
+			
+
+
+3、加入队伍
+http://api.7kzz.com/chat/app?act=jointeam&gameid=1&uid=1036&teamid=1
+参数说明：teamid：要加入的队伍ID
+          uid：用户ID
+          gameid：当前所在游戏
+          
+返回值：
+{"result":"0"}
+
+result说明：
+				0：加入成功
+				-1：gameid参数传递错误
+				-2：teamid参数传递错误
+				-3：队伍不存在
+				-4：用于已经加入，不能重复加入
+				-5：队伍人数超过5人，不能加入
+				-6：用户不存在
+				-7：加入操作失败
+
+
+
+4、退出队伍
+http://api.7kzz.com/chat/app?act=quitteam&gameid=1&uid=1035&teamid=1
+
+返回值:
+{"result":"0"}
+
+result说明：
+				0：退出成功
+				-1：gameid参数传递错误
+				-2：teamid参数传递错误
+				-3：队伍不存在
+				-4：用户已经不在该队伍中
+				-5：用户是队长，不能退出，只能解散队伍
+				-6：退出操作失败
+
+
+
+5、获取队伍成员列表
+http://api.7kzz.com/chat/app?act=memberlist&gameid=1&uid=1035&teamid=1
+
+成功返回值(成员信息列表)：
+[{"jointime":"2011-06-15 07:46:54","name":"star","teamid":3,"uid":1035},{"jointime":"2011-06-15 07:47:44","name":"star2","teamid":3,"uid":1036}]
+
+				uid：用户ID
+				name：用户名
+				teamid：队伍ID
+				jointime：加入时间
+				
+异常时返回值：
+{"result":"-1"}
+
+result说明：
+				-1：gameid参数丢失
+				-2：teamid参数丢失
+				-3：队伍不存在
+				-4：没有队伍列表
+				
+
+6、将成员踢出队伍
+http://api.7kzz.com/chat/app?act=kickfromteam&gameid=1&uid=1035&kickuid=1036
+				
+				gameid:所在游戏ID
+				uid:队伍队长ID
+				kickuid:需要被踢出的用户ID
+				
+				
+返回值：
+{"result":"0"}
+
+result说明：
+				0：踢出成功
+				-1:gameid参数丢失
+				-2:用户uid不在队伍中，没有资格踢出其他人
+				-3:队伍不存在
+				-4:被踢用户没有加入队伍，不能执行踢出操作
+				-5:被踢用户不在自己所在队伍中，不能执行踢出操作
+				-6:uid不是队伍队长，不能执行踢出操作
+				-7:uid和kickuid值相同，不能把自己踢出
+				-8:踢出操作执行失败
+				
+				
+7、设置队伍新队长
+http://api.7kzz.com/chat/app?act=setnewteamleader&gameid=1&uid=1035&newleaderuid=1035
+				
+				gameid:所在游戏ID
+				uid:队伍队长ID
+				newleaderuid:需要被设置为队长的用户ID
+
+返回值：
+{"result":"0"}
+
+result说明：
+			0：设置成功
+			-1:gameid参数丢失
+			-2:用户Uid不在队伍中，不能执行设置操作
+			-3:队伍不存在
+			-4:用户uid不是队长，没有资格执行设置操作
+			-5:newleaderuid还未加入任何队伍，不能被设置为队长
+			-6:newleaderuid还未加入uid所在队伍，不能被设置为队长
+			-7:不能设置自己为队长
+			-8:设置操作失败
+			
+
+7、解散用户所在队伍
+http://api.7kzz.com/chat/app?act=dismissteam&gameid=1&uid=1035
+				
+				gameid:所在游戏ID
+				uid:队伍队长ID
+
+
+返回值：
+{"result":"0"}
+
+result说明：
+			0：解散成功
+			-1:gameid参数丢失
+			-2:uid还没有加入队伍，没有资格执行解散操作
+			-3:队伍不存在
+			-4:uid不是队伍的队长，没有资格解散
+			-5:解散操作失败
+			
+			
+8、发送队伍聊天
+http://api.7kzz.com/chat/app?act=sendteamchat&gameid=1&fromuid=1036&destuid=1036&content=9999999&channelid=3
+
+用法同其他发送
