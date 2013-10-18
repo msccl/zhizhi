@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="utf-8"> 
+	<title>吱吱开发商管理系统-吱吱互动游戏引擎-dev.zizi.im</title>
+	<meta name="description" content="吱吱开发商管理系统，开发商注册登录后即可以下载吱吱互动游戏引擎sdk。开发商管理后台包含创建与管理开发商的互动游戏，给游戏创建与编辑游戏道具，给每个游戏创建与编辑多个游戏商店，拍卖行。并通过游戏统计数据掌握游戏的流量与收益，玩家喜好与分布。">
+	<meta name="keywords" content="吱吱,吱吱游戏,吱吱互动游戏,游戏引擎,开发商管理系统">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">	
+	<link href="css/zizidev_main.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript">
+	
+	</script>
+	
+	</head>
+	<body>
+		<div class="header">
+			<div class="top"></div>
+			<div class="nav">
+				<ul class="clearfix">
+					<li class="bluebt" style="width:75px;">
+						<div class="bt_l" style="width:40px;"><a href="#">首页</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">我的游戏</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">数据统计</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">帐户信息</a></div>
+						<div class="bt_r"></div>
+					</li>
+
+					
+					<li style="float:right;">
+						<div class="bt3">
+							<div class="bt_l"><a href="#">退  出</a></div>
+							<div class="bt_r"></div>
+						</div>
+					</li>
+					<li class="logineduser" style="float:right;">
+						<span><b>大脸猫catfly</b></span>
+					</li>
+				</ul>
+			</div>
+			<div class="navline"></div>
+			<div class="search">
+				<ul class="clearfix">
+					<li class="left"><input type="text" value="输入游戏名称" name="s" id="s"> </li>
+					<li class="left">
+						<div class="bt2">
+							<div class="bt_l"><a href="#">搜  索</a></div>
+							<div class="bt_r"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			
+			<!--  -->
+			<div class="container">
+				<div class="level">			
+					<span class="gray12"><a href="#">我的首页</a>&nbsp;&gt;&gt;&nbsp;<a href="#">我的游戏</a>&nbsp;&gt;&gt;&nbsp;疯狂农场3吱吱版 </span>
+				</div>
+
+				<div class="gamenav">
+					<ul class="clearfix">
+						<li class="gamenav_bluebt">
+							<a href="#">游戏资料</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">道具</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">商店</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">拍卖行</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">商城</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">货币</a>
+						</li>
+					</ul>
+				</div>
+				<div class="gamenav_line"></div>
+
+				<!--  -->
+				<div class="clearfix">
+					<div class="game_container left">
+						
+						<div class="gameinfo">
+							
+							<table class="tab_edit" style="width:100%"><tbody>
+								<tr>
+									<td class="l">游戏名称：</td><td class="r"><input class="textbox" value="疯狂农场3"/></td>
+								</tr>
+								<tr>
+									<td class="l">游戏图片：</td><td class="r"><img src="http://s.7kzz.com/img/201107/26/1311669598691.jpg"/></td>
+								</tr>
+								<tr>
+									<td class="l">更新图片：</td><td class="r"><input class="textbox" value="http://s.7kzz.com/img/201107/26/1311669598691.jpg"/></td>
+								</tr>
+								<tr>
+									<td class="l"></td>
+									<td class="r">
+										<div style="width:60px;" class="gbt">
+											<a href="#">选择图片</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="l">游戏描述：</td><td class="r"><textarea class="textbox" >明星坦克之战小游戏：你驾驶你的明星坦克登陆到敌方的海岸沙滩上，开始阻击敌人对你的进攻，你要用你自己的方式，驾驶坦克通过敌人的防御，但是途中有敌军坦克，炮塔，所以你一定要小心。</textarea></td>
+								</tr>
+								<tr>
+									<td class="l">游戏玩法：</td><td class="r"><textarea class="textbox" >坦克明星之战小游戏，比起以往的坦克游戏可玩性更高，有四种游戏难度，坦克武器变更可以升级。</textarea></td>
+								</tr>
+								<tr>
+									<td class="l">游戏地址：</td><td class="r"><input class="textbox" value="http://www.zizi.im"/></td>
+								</tr>
+								<tr>
+									<td class="l">游戏状态：</td><td class="r"><span class="green1">审核通过</span> <span class="red1">审核未通过</span></td>
+								</tr>
+								<tr>
+									<td class="l">添加时间：</td><td class="r">2011-08-08</td>
+								</tr>
+								
+								
+							</tbody></table>
+
+							<div class="t_center"><div class="bbt" style="width:80px;margin: 0 auto;"><a href="#">保存</a></div></div>
+						</div>
+						
+						<div>
+							
+						</div>
+
+						
+					</div>
+				
+					<!--  -->
+					<div class="sub_container2 right">
+						<div class="tit_2">
+							>游戏ID：
+						</div>
+						<div class="question">
+							<span class="red1"><b>BFD6720336116352094CD94EB86CF9B5</b></span>
+						</div>
+						<div class="tit_2">
+							>游戏ID在哪使用：
+						</div>
+						<div class="question">
+							<p><span class="blue1"><b>初始化吱吱==></b></span><br/>
+							initSys( zzContainer, <span class="red1"><b>'1C7473B9011CD08324CE0A23DC7D86DD'</b></span>, 700, 530,...<br/>
+							上面参数依次是吱吱容器id，游戏的id号，游戏高度，游戏宽度</p>
+						</div>
+
+						<div class="question">
+							<b>注意：</b>
+							<p>请妥善保管好你的游戏ID，不要将你的游戏及与其对应的游戏ID泄漏出去，以免给你带来不必要的损失。</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!--  -->
+
+
+		</div>
+
+
+		<div class="footer">
+			<div style="text-align:center">Copyright © 2010-2011 zizi 吱吱游戏 All Rights Reserved.</div>
+		</div>
+	</body>
+</html>

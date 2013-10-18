@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-lazy-init="true">
+	
+	<context:annotation-config />
+	<context:component-scan base-package="com.qkzz.web.developer.dao" />
+	<context:component-scan base-package="com.qkzz.web.stat.dao" />
+
+	<!-- 	
+		user database connect
+	-->
+	<bean id="userDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/7kzz_user?useUnicode=true&amp;characterEncoding=GBK" />
+        <property name="username" value="webuser" />
+        <property name="password" value="siteuser2010" />
+        <property name="initialSize" value="5" />
+        <property name="maxActive" value="100" />
+        <property name="maxIdle" value="30" />
+        <property name="maxWait" value="1000" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="defaultAutoCommit" value="false" />
+    </bean>
+
+	<bean id="userTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="userDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="userTransactionManager"/>
+	
+	<bean id="userTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="userDataSource"/>
+	</bean>
+
+	<!-- 
+		online database connect
+	-->
+	<bean id="onlineDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/7kzz_online?useUnicode=true&amp;characterEncoding=GBK" />
+        <property name="username" value="webuser" />
+        <property name="password" value="siteuser2010" />
+        <property name="initialSize" value="5" />
+        <property name="maxActive" value="100" />
+        <property name="maxIdle" value="30" />
+        <property name="maxWait" value="1000" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="defaultAutoCommit" value="false" />
+    </bean>
+	
+	<bean id="onlineTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="onlineDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="onlineTransactionManager"/>
+	
+	<bean id="onlineTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="onlineDataSource" />
+	</bean>
+
+	<!-- 	
+		game database connect
+	-->
+	<bean id="gameDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/7kzz_game?useUnicode=true&amp;characterEncoding=GBK" />
+        <property name="username" value="webuser" />
+        <property name="password" value="siteuser2010" />
+        <property name="initialSize" value="5" />
+        <property name="maxActive" value="100" />
+        <property name="maxIdle" value="30" />
+        <property name="maxWait" value="1000" />
+        <property name="poolPreparedStatements" value="true" />
+        <property name="defaultAutoCommit" value="false" />
+    </bean>
+
+	<bean id="gameTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="gameDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="gameTransactionManager"/>
+	
+	<bean id="gameTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="gameDataSource"/>
+	</bean>
+
+	<!-- 
+		money database connect
+	-->
+	<bean id="moneyDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+	<property name="alias" value="money" />
+	<property name="driver" value="com.mysql.jdbc.Driver" />
+   	<property name="driverUrl" value="jdbc:mysql://127.0.0.1:3306/7kzz_money?useUnicode=true&amp;characterEncoding=GBK" />
+   	<property name="user" value="webuser" />
+   	<property name="password" value="siteuser2010" />
+   	<property name="maximumConnectionCount" value="10" />
+   	<property name="minimumConnectionCount" value="5" />
+   	<property name="houseKeepingTestSql" value="select CURRENT_DATE" />
+	</bean>
+	
+	<bean id="moneyTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="moneyDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="moneyTransactionManager"/>
+	
+	<bean id="moneyTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="moneyDataSource" />
+	</bean>
+
+
+	<!-- 
+		im database connect
+	-->
+	<bean id="imDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+	<property name="alias" value="money" />
+	<property name="driver" value="com.mysql.jdbc.Driver" />
+   	<property name="driverUrl" value="jdbc:mysql://127.0.0.1:3306/7kzz_im?useUnicode=true&amp;characterEncoding=GBK" />
+   	<property name="user" value="webuser" />
+   	<property name="password" value="siteuser2010" />
+   	<property name="maximumConnectionCount" value="10" />
+   	<property name="minimumConnectionCount" value="5" />
+   	<property name="houseKeepingTestSql" value="select CURRENT_DATE" />
+	</bean>
+	
+	<bean id="imTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="imDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="imTransactionManager"/>
+	
+	<bean id="imTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="imDataSource" />
+	</bean>
+	
+	<!-- 
+		stat database connect
+	-->
+	<bean id="statDataSource" class="org.logicalcobwebs.proxool.ProxoolDataSource">
+	<property name="alias" value="money" />
+	<property name="driver" value="com.mysql.jdbc.Driver" />
+   	<property name="driverUrl" value="jdbc:mysql://127.0.0.1:3306/7kzz_stat?useUnicode=true&amp;characterEncoding=GBK" />
+   	<property name="user" value="webuser" />
+   	<property name="password" value="siteuser2010" />
+   	<property name="maximumConnectionCount" value="10" />
+   	<property name="minimumConnectionCount" value="5" />
+   	<property name="houseKeepingTestSql" value="select CURRENT_DATE" />
+	</bean>
+	
+	<bean id="statTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="statDataSource" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="statTransactionManager"/>
+	
+	<bean id="statTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="statDataSource" />
+	</bean>
+	
+	<bean id="log4jdbcInterceptor" class="net.sf.log4jdbc.DataSourceSpyInterceptor" />
+    <bean id="dataSourceLog4jdbcAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+       <property name="interceptorNames">
+           <list>
+              <value>log4jdbcInterceptor</value>        
+           </list>
+       </property>
+       <property name="beanNames">
+           <list>
+              <value>userDataSource</value>
+              <value>statDataSource</value>
+           </list>
+       </property>
+    </bean>
+
+
+</beans>

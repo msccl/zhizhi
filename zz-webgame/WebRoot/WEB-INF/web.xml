@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<context-param>
+		<param-name>datasrc</param-name>
+		<param-value>proxool</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.qkzz.global.QKListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>QKFilter</filter-name>
+		<filter-class>com.qkzz.global.QKFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>QKFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>GameAuctionServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameAuctionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameAuctionServlet</servlet-name>
+		<url-pattern>/app/auction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GameStoreServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameStoreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameStoreServlet</servlet-name>
+		<url-pattern>/app/store</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GameToolsServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameToolsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameToolsServlet</servlet-name>
+		<url-pattern>/app/tools</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GameAuctionToolsServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameAuctionToolsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameAuctionToolsServlet</servlet-name>
+		<url-pattern>/app/auctiontools</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GameStoreToolsServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameStoreToolsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameStoreToolsServlet</servlet-name>
+		<url-pattern>/app/storetools</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserToolBoxServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.UserToolBoxServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserToolBoxServlet</servlet-name>
+		<url-pattern>/app/usertoolbox</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GameInfoServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GameInfoServlet</servlet-name>
+		<url-pattern>/app/game</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.qkzz.game.action.GameToolsAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/app/gametooladd</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>proxdbadmin</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>proxdbadmin</servlet-name>
+		<url-pattern>/proxdbadmin</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/common/404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/500.jsp</location>
+	</error-page>
+
+</web-app>

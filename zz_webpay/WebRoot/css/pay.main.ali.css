@@ -1,0 +1,59 @@
+#Content{clear:both;margin:0 auto;text-align:left;width:820px;}
+.hidden{display:none;}
+.Tab{background:none;}
+.clearfix{display:inline-table;}
+* html .clearfix{height:1%;}
+*+html .clearfix{min-height:1px;}
+.clearfix{display:block;}
+.payButton{border:none;cursor:pointer;font-size:14px;line-height:2;font-weight:bold;height:32px;padding-left:24px;*padding-left:16px;text-align:center;width:81px;}
+.payButton{background:url(http://wangxing365.com/img/btnTmp_orange.png) no-repeat 0 0;}
+.WordSeven{background-position:0 -175px;width:159px;}
+.pad{margin:10px 0;}
+.orderPayment{clear:both;margin:10px auto;width:850px;padding:0 10px;}
+#orderInfo{clear:both;margin:10px 20px;}
+#orderInfo h1{display:block;border:dotted 1px #CCCCCC;margin:10px 0;padding:10px 10px;text-align:center;}
+#orderInfo h1 a{color:#417CB8;}
+#accountpay{margin:10px 0;border:solid 1px #F0D996;background-color:#FDF6E3;padding:10px 10px;}
+#accountpay p{margin:10px 0;}
+#accountpay a{color:#417CB8;}
+.warning{border:solid 1px #F0D996;width:600px;margin:20px 0;padding:15px;background-color:#FDF6E3;font-size:14px;line-height:2;}
+.warning a{color:#417CB8;}
+.TabContent dl dt{margin:10px 0;font-size:14px;padding:5px 0;}
+.TabContent dl dd{margin:10px 0;font-size:14px;padding:5px 0;}
+.orderRes{clear:both;margin:10px 20px;border:dotted 1px #CCCCCC;padding:30px 20px;}
+.orderRes p{margin:10px;padding:5px 0;font-size:14px;}
+.orderRes h1{margin:10px;padding:5px 0;font-size:15px;}
+.orderRes h2{margin:10px;padding:5px 0;text-align:center;}
+.orderRes p a{color:#417CBB;}
+.orderRes .warning{margin:10px 10px;}
+
+
+@media projection,screen{.tabs-hide{display:none;}}
+@media print{.fragment{display:block!important;height:auto!important;opacity:1!important;}.anchors{display:none;}}
+.anchors{list-style:none;margin:0;padding:0 0 1px;z-index:0;}
+.anchors:after{clear:both;content:" ";display:block;}
+.anchors li{float:left;margin:0 1px 0 0;}
+.anchors a{border:1px solid #CCC;display:block;font-size:14px;margin-right:7px;padding:5px;position:relative;text-decoration:none;top:1px;z-index:0;margin-top:5px;}
+.anchors .tabs-selected a{background:#FFF4C2;border:1px solid #FC3;border-bottom:0;color:#000;font-size:16px;font-weight:bold;font-weight:bold;margin:0;margin-bottom:-1px;margin-left:0;margin-right:7px;padding:10px 11px 13px 11px;text-decoration:none;top:1px;}
+* html .anchors .tabs-selected a,* html .anchors a{color:#000;margin-right:7px;}
+.anchors a:focus,.anchors a:active{outline:none;}
+.anchors a:hover,.anchors a:focus,.anchors a:active{background:#EEF;}
+.anchors .tabs-selected a,.anchors .tabs-selected a:hover{background:#FFF4C2;}
+.anchors a img{padding-right:5px;}
+.anchors a span{padding:0;}
+.anchors .tabs-selected a:link,.anchors .tabs-selected a:visited{cursor:text;}
+.anchors a:hover,.anchors a:focus,.anchors a:active{cursor:pointer;}
+.fragment{background:#FFF4C2;border:1px solid #FC3;padding:8px;}
+*+html .anchors{_height:1%;display:inline-block;}
+*+html .anchors a{float:left;}
+div.TabContent{background:#FFF;padding:10px;text-align:left;}
+.Tab .anchors li{margin-right:-1px;}
+.Tab .anchors .tabs-selected a{background:url(http://wangxing365.com/img/tab.png) no-repeat -50px -580px;border:0;color:#013299;color:#FFF;font-size:14px;font-weight:bold;padding:0;margin-right:7px;}
+.Tab .anchors .tabs-selected a span{background:url(http://wangxing365.com/img/tab.png) right -608px;display:block;padding:8px 20px 4px 20px;}
+.Tab .anchors .tabs-selected a:hover{background:url(http://wangxing365.com/img/tab.png) no-repeat -50px -580px;color:#FFF;}
+.Tab .anchors a{background:url(http://wangxing365.com/img/tab.png) no-repeat -50px -660px;border:0 solid #AEB7D6;border-bottom:0;color:#000;font-size:14px;font-weight:bold;left:0;margin-top:0;padding:0;top:0;margin-right:7px;}
+.Tab .anchors a span{background:url(http://wangxing365.com/img/tab.png) right -688px;display:block;line-height:16px;margin:0;padding:8px 20px 4px 20px;}
+.Tab .anchors a:hover,.Tab .anchors a:focus,.Tab .anchors a:active{background:url(../img/tab.png) no-repeat -50px -660px;color:#FF7300;}
+.Tab .fragment{background:#FFF;border:0;border:1px solid #6F74A9;padding:0;}
+.Tab .TabContent{border:3px solid #D9D9DE;padding:16px;}
+.Tab,.Tab .anchors{padding:0;}

@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="utf-8"> 
+	<title>吱吱开发商管理系统-吱吱互动游戏引擎-dev.zizi.im</title>
+	<meta name="description" content="吱吱开发商管理系统，开发商注册登录后即可以下载吱吱互动游戏引擎sdk。开发商管理后台包含创建与管理开发商的互动游戏，给游戏创建与编辑游戏道具，给每个游戏创建与编辑多个游戏商店，拍卖行。并通过游戏统计数据掌握游戏的流量与收益，玩家喜好与分布。">
+	<meta name="keywords" content="吱吱,吱吱游戏,吱吱互动游戏,游戏引擎,开发商管理系统">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">	
+	<link href="css/zizidev_main.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript">
+	
+	</script>
+	
+	</head>
+	<body>
+		<div class="header">
+			<div class="top"></div>
+			<div class="nav">
+				<ul class="clearfix">
+					<li class="bluebt" style="width:75px;">
+						<div class="bt_l" style="width:40px;"><a href="#">首页</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">我的游戏</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">数据统计</a></div>
+						<div class="bt_r"></div>
+					</li>
+					<li class="graybt">
+						<div class="bt_l"><a href="#">帐户信息</a></div>
+						<div class="bt_r"></div>
+					</li>
+
+					
+					<li style="float:right;">
+						<div class="bt3">
+							<div class="bt_l"><a href="#">退  出</a></div>
+							<div class="bt_r"></div>
+						</div>
+					</li>
+					<li class="logineduser" style="float:right;">
+						<span><b>大脸猫catfly</b></span>
+					</li>
+				</ul>
+			</div>
+			<div class="navline"></div>
+			<div class="search">
+				<ul class="clearfix">
+					<li class="left"><input type="text" value="输入游戏名称" name="s" id="s"> </li>
+					<li class="left">
+						<div class="bt2">
+							<div class="bt_l"><a href="#">搜  索</a></div>
+							<div class="bt_r"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main">
+			
+			<!--  -->
+			<div class="container">
+				<div class="level">			
+					<span class="gray12"><a href="#">我的首页</a>&nbsp;&gt;&gt;&nbsp;<a href="#">我的游戏</a>&nbsp;&gt;&gt;&nbsp;<a href="#">疯狂农场3吱吱版</a>&nbsp;&gt;&gt;&nbsp;游戏道具 </span>
+				</div>
+				
+				<div class="gamenav">
+					<ul class="clearfix">
+						<li class="gamenav_graybt">
+							<a href="#">游戏资料</a>
+						</li>
+						<li class="gamenav_bluebt">
+							<a href="#">道具</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">商店</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">拍卖行</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">商城</a>
+						</li>
+						<li class="gamenav_graybt">
+							<a href="#">货币</a>
+						</li>
+					</ul>
+				</div>
+				<div class="gamenav_line"></div>
+
+				<!--  -->
+				<div class="clearfix">
+					<div class="game_container left">
+						
+						<div class="it_action">
+							<table><tbody>
+								<tr>
+									<td>
+										<ul class="clearfix">
+											<li class="left"><input type="text" value="输入道具名称" name="it_s" id="it_s"> </li>
+											<li class="left">
+												<div class="gbt">
+													<a href="#">搜  索</a>
+												</div>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<div class="bt1 right">
+											<div class="bt_l"><a class="addbg_bt" href="#">添加道具</a></div>
+											<div class="bt_r"></div>
+										</div>
+									</td>
+								</tr>
+							</tbody></table>	
+						</div>
+						
+						<div>
+							<table class="list_title"><tbody>
+								<tr>
+									<td class="it_a"><a href="#">道具图片</a></td>
+									<td class="it_b"><a href="#">道具名称</a></td>
+									<td class="it_c"><a href="#">状态</a></td>
+									<td class="it_d"><a href="#">编号</a></td>
+									<td class="it_e"><a href="#">相关操作</a></td>
+								</tr>
+							</tbody></table>
+
+							<table class="g_item"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot0.gif" title="通过"/>通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+							<table class="g_item_bg"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot1.gif" title="未通过"/>未通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+							<table class="g_item"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot0.gif" title="通过"/>通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+							<table class="g_item_bg"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot1.gif" title="未通过"/>未通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+							<table class="g_item"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot0.gif" title="通过"/>通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+							<table class="g_item_bg"><tbody>
+								<tr>
+									<td class="it_a"><img src="static/img/item0.png" title="力量之靴"/></td>
+									<td class="it_b">力量之靴</td>
+									<td class="it_c"><img src="images/dot1.gif" title="未通过"/>未通过</td>
+									<td class="it_d">3245</td>
+									<td class="it_e"><a href="#">商店</a> <a href="#">编辑</a> <span class="del"><a href="#">删除</a></span></td>
+								</tr>
+							</tbody></table>
+						</div>
+
+						<div class="pagenav">
+							<span class="pre bbt"><a href="#"><<</a></span>
+								<a href="#">1</a> <a href="#">2</a> <a class="pagenow" href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a>
+							<span class="next bbt"><a href="#">>></a></span>
+						</div>
+					</div>
+				
+					<!--  -->
+					<div class="sub_container right">
+						<div class="tit_2">
+							<div>>添加 / 编辑 道具</div>
+						</div>
+						<div class="sub_cont question">
+							<div class="iteminfo">
+							<table class="tab_edit" style="width:100%"><tbody>
+								<tr>
+									<td class="l">道具名称：</td><td class="r"><input class="textbox" value="力量之靴"/></td>
+								</tr>
+								<tr>
+									<td class="l">道具图片：</td><td class="r"><img src="static/img/item0.png" title="力量之靴"/></td>
+								</tr>
+								<tr>
+									<td class="l">更新图片：</td><td class="r"><input class="textbox" value="static/img/item0.png"/></td>
+								</tr>
+								<tr>
+									<td class="l"></td>
+									<td class="r">
+										<div style="width:60px;" class="gbt">
+											<a href="#">选择图片</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="l">道具描述：</td><td class="r"><textarea class="textbox" >使您的攻击上升5点，持续10秒。</textarea></td>
+								</tr>
+								<tr>
+									<td class="l">允许交易：</td><td class="r"><input class="textbox" style="width:40px;" value="1"/><br/>允许为1，否则为0</td>
+								</tr>
+								<tr>
+									<td class="l">允许拍卖：</td><td class="r"><input class="textbox" style="width:40px;" value="0"/><br/>允许为1，否则为0</td>
+								</tr>
+								<tr>
+									<td class="l">功能键值：</td><td class="r"><textarea class="textbox" >ddd=eee</textarea></td>
+								</tr>
+								<tr>
+									<td class="l">货币ID：</td><td class="r"><input class="textbox" value="121"/></td>
+								</tr>
+								<tr>
+									<td class="l">价格：</td><td class="r"><input class="textbox" value="10"/></td>
+								</tr>
+								
+							</tbody></table>
+							</div>		
+						</div>
+
+						<div class="save bbt"><a href="#">保存</a></div>
+					</div>
+
+				</div>
+
+			</div>
+			<!--  -->
+
+
+		</div>
+
+
+		<div class="footer">
+			<div style="text-align:center">Copyright © 2010-2011 zizi 吱吱游戏 All Rights Reserved.</div>
+		</div>
+	</body>
+</html>

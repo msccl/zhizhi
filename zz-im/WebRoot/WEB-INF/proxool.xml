@@ -1,0 +1,98 @@
+<txdb>
+	<proxool>
+		<alias>admin</alias>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-url>jdbc:mysql://127.0.0.1:3306/admin?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+		<driver-properties>
+			<property name="user" value="webuser"/>
+			<property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+		<house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>game</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_game?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>user</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_user?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>im</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_im?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>online</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_online?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>money</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_money?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>chat</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_chat?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+	<proxool>
+  	<alias>queue</alias>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-url>jdbc:mysql://127.0.0.1:3306/7kzz_queue?useUnicode=true&amp;characterEncoding=GBK</driver-url>
+    <driver-properties>
+    	<property name="user" value="webuser"/>
+      <property name="password" value="siteuser2010"/>
+		</driver-properties>
+		<maximum-connection-count>100</maximum-connection-count>
+		<trace>true</trace>
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>
+	</proxool>
+</txdb>
